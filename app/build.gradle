@@ -17,54 +17,58 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-   // compile 'com.android.support:appcompat-v7:25.2.0'
-    testCompile 'junit:junit:4.12'
-    testCompile "org.mockito:mockito-core:1.10.19"
-    testCompile 'org.robolectric:robolectric:3.2.2'
-    compile 'com.android.support:appcompat-v7:25.2.0'
 
-    //compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'com.squareup.retrofit2:retrofit:2.0.2'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'io.reactivex:rxjava:1.1.6'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-    compile 'org.jetbrains:annotations:13.0'
-    compile 'com.google.guava:guava:20.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:recyclerview-v7:25.2.0'
 
-    //DAGGER
-    compile 'com.google.dagger:dagger:2.0'
-    provided 'com.google.dagger:dagger-compiler:2.0'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        // compile 'com.android.support:appcompat-v7:25.2.0'
+        testCompile 'junit:junit:4.12'
+        testCompile "org.mockito:mockito-core:1.10.19"
+        testCompile 'org.robolectric:robolectric:3.2.2'
+        compile 'com.android.support:appcompat-v7:25.2.0'
 
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+        //compile 'com.android.support:appcompat-v7:23.4.0'
+        compile 'com.google.code.gson:gson:2.6.2'
+        compile 'com.squareup.retrofit2:retrofit:2.0.2'
+        compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+        compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+        compile 'io.reactivex:rxandroid:1.2.1'
+        compile 'io.reactivex:rxjava:1.1.6'
+        compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+        compile 'org.jetbrains:annotations:13.0'
+        compile 'com.google.guava:guava:20.0'
+        testCompile 'junit:junit:4.12'
+        compile 'com.android.support:recyclerview-v7:25.2.0'
 
-    androidTestCompile('com.android.support.test:runner:0.5') {
-        // Necessary if your app targets Marshmallow (since the test runner
-        // hasn't moved to Marshmallow yet)
-        exclude group: 'com.android.support', module: 'support-annotations'
+        //DAGGER
+        compile 'com.google.dagger:dagger:2.0'
+        provided 'com.google.dagger:dagger-compiler:2.0'
+        provided 'org.glassfish:javax.annotation:10.0-b28'
+
+        compile 'com.jakewharton:butterknife:8.4.0'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+        androidTestCompile('com.android.support.test:runner:0.5') {
+            // Necessary if your app targets Marshmallow (since the test runner
+            // hasn't moved to Marshmallow yet)
+            exclude group: 'com.android.support', module: 'support-annotations'
+        }
+        compile 'com.android.support:support-annotations:25.2.0'
+        testCompile 'com.android.support:support-annotations:25.2.0'
+        androidTestCompile 'com.android.support:support-annotations:25.2.0'
+
+        androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
+            exclude group: 'com.android.support', module: 'appcompat'
+            exclude group: 'com.android.support', module: 'support-v4'
+            exclude module: 'recyclerview-v7'
+        }
+
+        compile 'com.squareup.picasso:picasso:2.5.2'
+
+
     }
-    compile 'com.android.support:support-annotations:25.2.0'
-    testCompile 'com.android.support:support-annotations:25.2.0'
-    androidTestCompile 'com.android.support:support-annotations:25.2.0'
-
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
-        exclude group: 'com.android.support', module: 'appcompat'
-        exclude group: 'com.android.support', module: 'support-v4'
-        exclude module: 'recyclerview-v7'
-    }
-
-    compile 'com.squareup.picasso:picasso:2.5.2'
 }
