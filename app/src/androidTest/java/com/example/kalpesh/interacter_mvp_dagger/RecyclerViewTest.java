@@ -58,13 +58,13 @@ public class RecyclerViewTest {
         return movies;
     }*/
 
-    @Test
+   /* @Test
     public void checkAllItemsAreLoaded() throws Exception {
         for (int counter = 0; counter < movies.size(); counter++) {
             onView(withId(R.id.movies_recycler_view)).perform(RecyclerViewActions.scrollToPosition(counter));
             onView(withText(movies.get(counter).getTitle())).check(matches(isDisplayed()));
         }
-    }
+    }*/
 
 
 }
