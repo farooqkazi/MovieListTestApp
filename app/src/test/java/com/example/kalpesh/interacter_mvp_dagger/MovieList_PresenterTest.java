@@ -109,7 +109,7 @@ public class MovieList_PresenterTest {
     }
 
 
-    @Test
+    /*@Test
     public void testDataShouldLoadIntotheView() {
 
         //In APIClass, where you specify @Get, @Post
@@ -129,17 +129,16 @@ public class MovieList_PresenterTest {
         inOrder.verify(mockView, times(1)).onFetchDataSuccess(moviesResponse);
         inOrder.verify(mockView, times(1)).onFetchDataCompleted();
 
-    }
+    }*/
 
     @Test
     public void noInteractionsWithViewShouldTakePlaceIfUserIsNull() {
         // movieList_presenter.performSearch(Constants.API_KEY);
-
         // user object is not initialized, lets verify no interactions take place
         verifyZeroInteractions(mockView);
     }
 
-    @Test
+    /*@Test
     public void fetchErrorShouldReturnErrorToView() {
 
         Exception exception = new Exception();
@@ -156,6 +155,6 @@ public class MovieList_PresenterTest {
         inOrder.verify(mockView, times(1)).onFetchDataStarted();
         inOrder.verify(mockView, times(1)).onFetchDataError(exception);
         verify(mockView, never()).onFetchDataCompleted();
-    }
+    }*/
 
 }
